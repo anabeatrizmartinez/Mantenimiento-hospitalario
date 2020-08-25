@@ -1,13 +1,15 @@
 *
 {
-    box-sizing: border-box;
-    margin: 0;
+    box-sizing: border-box; /*Para que ni el padding ni el borde me aumenten el tamaño definido*/
+    margin: 0; /*Para eliminar el margen externo*/
 }
 
 body
 {
     font-family: 'Lato', sans-serif;    
 }
+
+/* Estilos para el header */
 
 .header__first
 {
@@ -62,7 +64,7 @@ body
 
 .header__menu a:hover
 {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /*Para que cambie el color al pasar el mouse sobre un link*/
 }
 
 .input
@@ -80,6 +82,8 @@ body
 {
     color: white;
 }
+
+/* Estilos para el container */
 
 .container
 {
@@ -106,6 +110,8 @@ body
     padding: 2em 15em 15em;
     font-size: 1.3rem;
 }
+
+/* Estilos para el footer */
 
 .footer
 {
@@ -140,9 +146,11 @@ body
 .footer__cr
 {
     display: flex;
+    align-items: center;
 }
 
 .footer__cr img
 {
-    width: 1em;
+    width: 15px;
+    height: 15px;
 }

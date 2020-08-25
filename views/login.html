@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <title>Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
 </head>
+
 <body>
     <!-- Sección para el header de la página -->
     <header class="header">
@@ -30,12 +32,24 @@
 
     <!-- Sección para el contenedor de la página -->
     <section class="container">
-        <img class="container__imgCentral" src="../images/equipos.jpg" alt="Imagen">
-        <h1 class="container__welcome">Bienvenido al Portal de equipos del Hospital del Táchira</h1>
-        <p class="container__texto">
-            En el Hospital del Táchira nos preocupamos por nuestros pacientes, sus familias y entre nosotros a través de acciones diarias, momentos importantes y avances emocionantes.<br>
-            Somos el hogar de casi 5,000 empleados, más de 2,000 estudiantes de atención médica y 1,000 voluntarios que están comprometidos a colaborar con los pacientes y sus familias para garantizar que brindemos atención compasiva y de alta calidad de manera continua.
-        </p>
+            <h1>Login</h1>
+            <form method="post">
+                <div class="container__label">
+                    <label for="inputUser">Nombre de usuario</label>
+                </div>
+                <div class="container__input">
+                    <input type="text" class="inputUser" name="user" id="inputUser">
+                </div>
+                <div class="container__label">
+                    <label for="inputPassword">Contraseña</label>
+                </div>
+                <div class="container__input">
+                    <input type="password" class="inputPassword" name="password" id="inputPassword">
+                </div>
+                <div class="container__btn">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
     </section>
 
     <!-- Sección para el footer de la página -->
