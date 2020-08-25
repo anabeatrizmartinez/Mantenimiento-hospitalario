@@ -122,7 +122,7 @@ body
     border: 2px solid rgb(211, 213, 214);
 }
 
-.container__input input:focus
+.container__input input:focus /*Para resaltar al seleccionar el input*/
 {
     box-shadow: 0 0 5px 2px rgb(42, 27, 55);
 }
@@ -145,7 +145,7 @@ body
     outline: none;
 }
 
-.container__btn input:hover
+.container__btn input:hover /*Para que cambie el color al pasar el mouse sobre el botón*/
 {
     background-color: rgba(42, 27, 55, 0.9);
 }
