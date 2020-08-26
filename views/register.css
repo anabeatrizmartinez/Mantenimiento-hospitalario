@@ -122,6 +122,27 @@ body
     border: 2px solid rgb(211, 213, 214);
 }
 
+.container__select
+{
+    padding-bottom: 1em;
+}
+
+.container__select select
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 1em;
+    border: 2px solid rgb(211, 213, 214);
+    outline: none;
+}
+
+.container__select select:focus /*Para resaltar al seleccionar la lista*/
+{
+    box-shadow: 0 0 5px 2px rgb(42, 27, 55);
+}
+
 .container__input input:focus /*Para resaltar al seleccionar el input*/
 {
     box-shadow: 0 0 5px 2px rgb(42, 27, 55);
