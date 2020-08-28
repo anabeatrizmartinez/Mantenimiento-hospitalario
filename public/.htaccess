@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1
+
+# RewriteCond %{REQUEST_FILENAME} !-f Solicita el nombre del archivo y verifica si es un archivo que existe realmente.
+#  RewriteCond %{REQUEST_FILENAME} !-d Solicita el nombre del archivo y verifica si es un directorio que existe realmente.
+#  Esto es porque no queremos que apache modifique cosas si los archivos realmente existen.
+#  RewriteRule ^(.*)$ Indica que cualquier cosa que llegue después de la base, se la vamos a enviar a index.php con el parámetro route: index.php?route=$1 y así no se ve en la url del navegador.
