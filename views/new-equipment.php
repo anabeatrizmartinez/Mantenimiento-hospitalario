@@ -23,7 +23,7 @@
                     <label for="inputEquipo">Nombre de equipo</label>
                 </div>
                 <div class="container__input">
-                    <input type="text" class="inputEquipo" name="equipo" id="inputEquipo">
+                    <input type="text" class="inputEquipo" name="name" id="inputEquipo">
                 </div>
                 <div class="container__label">
                     <label for="inputArea">Área de ubicación</label>
@@ -47,6 +47,11 @@
                     <input type="submit" value="Registrar">
                 </div>
             </form>
+            <?php
+            if (isset($result) && $result) {
+                echo '<div class="success">Equipo agregado!</div>';
+            }
+            ?>
         </div>
         <div class="container__back">
             <a href="<?php echo BASE_URL; ?>equipment">Regresar</a>

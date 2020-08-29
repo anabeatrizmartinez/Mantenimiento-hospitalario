@@ -1,4 +1,4 @@
-<!--   Front Controller   -->
+<!--    Front Controller    -->
 
 <?php
 
@@ -11,6 +11,10 @@ error_reporting(E_ALL);
 //Autoloading de composer con PSR-4
 
 require_once '../vendor/autoload.php'; //Con esto ya puedo utilizar las clases de phroute directamente, sin necesidad de hacer los include o require de los archivos tal cual que usa la librería.
+
+//Traer archivo contenedor de la base de datos.
+
+include_once '../config.php';
 
 //Para crear una constante con la url completa. Debe ir primero para que ya esté cargado en las demás vistas.
 

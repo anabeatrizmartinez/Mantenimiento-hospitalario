@@ -157,6 +157,7 @@ body
     border: none;
     border-radius: 2em;
     outline: none;
+    margin-bottom: 1em;
 }
 
 .container__btn input:hover /*Para que cambie el color al pasar el mouse sobre el botón*/
@@ -178,6 +179,14 @@ body
 .container a:hover
 {
     background-color: rgba(42, 27, 55, 0.5);
+}
+
+.success
+{
+    color: rgb(5, 60, 5);
+    background-color: rgba(78, 244, 130, 0.5);
+    border-radius: 2em;
+    padding: 1em 7em;
 }
 
 .container__back

@@ -30,6 +30,18 @@
                     <th>Actualizar</th>
                     <th>Borrar</th>
                 </tr>
+                <?php
+                foreach ($equipments as $equipment) {
+                    echo '<tr>';
+                    echo '<td>' . $equipment['name'] . '</td>';
+                    echo '<td>' . $equipment['area'] . '</td>';
+                    echo '<td>' . $equipment['estado'] . '</td>';
+                    echo '<td>' . $equipment['mantenimiento'] . '</td>';
+                    echo '<td>Actualizar</td>';
+                    echo '<td>Borrar</td>';
+                    echo '</tr>';
+                }
+                ?>
             </table>
         </div>
         <div class="container__nuevo">

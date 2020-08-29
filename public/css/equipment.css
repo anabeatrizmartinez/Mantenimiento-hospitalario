@@ -124,6 +124,11 @@ body
     background-color: rgba(42, 27, 55, 0.5);
 }
 
+.container__table
+{
+    padding-bottom: 4em;
+}
+
 .container__nuevo
 {
     position: absolute;
