@@ -33,7 +33,7 @@
             </table>
         </div>
         <div class="container__nuevo">
-            <a href="<?php echo BASE_URL; ?>operador-new-equipment">Nuevo Equipo</a>
+            <a href="<?php echo BASE_URL; ?>newequipment">Nuevo Equipo</a>
         </div>
     </section>
 

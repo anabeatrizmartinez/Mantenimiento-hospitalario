@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '6f2d665d0dda5bf406a1e932dcf3de0cf1713d6b',
+    'reference' => 'fdb297e5fead1e0e47fd0ba4bb4e1792d16b7edc',
     'name' => 'trabajo/una',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '6f2d665d0dda5bf406a1e932dcf3de0cf1713d6b',
+      'reference' => 'fdb297e5fead1e0e47fd0ba4bb4e1792d16b7edc',
     ),
   ),
 );

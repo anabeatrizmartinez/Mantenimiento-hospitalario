@@ -49,7 +49,7 @@
             </form>
         </div>
         <div class="container__back">
-            <a href="<?php echo BASE_URL; ?>operador-equipment">Regresar</a>
+            <a href="<?php echo BASE_URL; ?>equipment">Regresar</a>
         </div>
     </section>
 

@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
 require_once '../vendor/autoload.php'; //Con esto ya puedo utilizar las clases de phroute directamente, sin necesidad de hacer los include o require de los archivos tal cual que usa la librería.
 
-//Para crear una constante con la url completa
+//Para crear una constante con la url completa. Debe ir primero para que ya esté cargado en las demás vistas.
 
 $baseFile = $_SERVER['SCRIPT_NAME']; //Me devuelve el directorio base CON el archivo raiz: /Trabajo/public/index.php
 $raiz = basename($baseFile); //Me devuelve la raiz del proyecto: index.php
@@ -32,64 +32,25 @@ use Phroute\Phroute\RouteCollector;
 
 $router = new RouteCollector();
 
-//Dispatcher de phroute
+//Llamando las vistas:
+
+//Vista Principal:
+$router->controller('/', App\Controllers\IndexController::class); //el primer parámetro es el nombre que se le dará a la ubicación del render(). El 2do parámetro es la clase del controlador que manejará la ruta.
+//Vista de Usuarios:
+$router->controller('/', App\Controllers\UserController::class);
+//Vista de Operador:
+$router->controller('/', App\Controllers\OperadorController::class);
+//Vista de Equipos:
+$router->controller('/', App\Controllers\EquipmentController::class);
+//Vista de Reporte:
+$router->controller('/', App\Controllers\ReportController::class);
+
+//Dispatcher de phroute. Debe ir después de llamar las vistas.
 
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData()); //Crear el objeto que va a llamar a los demás archivos.
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $route); //Respuesta que regresa el dispatcher.
 
 echo $response;
-
-//Llamando las vistas:
-
-$router->get('/', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/index.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/login', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/login.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/register', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/register.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/operador', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/operator.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/operador-equipment', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/equipment.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/operador-new-equipment', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/new-equipment.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
-$router->get('/operador-report', function () {
-    //Querys de base de datos
-
-    //Vista a la que se quiere acceder
-    return render('../views/report.php'); //Como el arreglo del 2do parámetro, puedo enviar variable con query.
-});
-
 
 
 //Función "render" para llamar las vistas
