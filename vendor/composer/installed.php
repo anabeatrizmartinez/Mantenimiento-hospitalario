@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd35fc233e2c4be39e540e33b882e694129792efc',
+    'reference' => '767f09dd927af40e4fd5564cbadca19a1d72bb47',
     'name' => 'trabajo/una',
   ),
   'versions' => 
@@ -105,6 +105,15 @@
       array (
       ),
       'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
+    ),
+    'siriusphp/validation' => 
+    array (
+      'pretty_version' => '3.0.1',
+      'version' => '3.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6e16e6b4636abe580aee9d6529a721ee830c9e61',
     ),
     'symfony/console' => 
     array (
@@ -219,7 +228,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd35fc233e2c4be39e540e33b882e694129792efc',
+      'reference' => '767f09dd927af40e4fd5564cbadca19a1d72bb47',
     ),
     'voku/portable-ascii' => 
     array (

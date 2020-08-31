@@ -143,11 +143,20 @@ body
     border: none;
     border-radius: 2em;
     outline: none;
+    margin-bottom: 1em;
 }
 
 .container__btn input:hover /*Para que cambie el color al pasar el mouse sobre el botón*/
 {
     background-color: rgba(42, 27, 55, 0.9);
+}
+
+.danger
+{
+    color: rgb(60, 5, 5);
+    background-color: rgba(244, 78, 78, 0.5);
+    border-radius: 2em;
+    padding: 1em 4em;
 }
 
 /* Estilos para el footer */

@@ -13,12 +13,12 @@
 
     <!-- Sección para el contenedor de la página -->
     <section class="container">
-        <p>Bienvenido Operador!</p>
+        <p>Bienvenido(@) <?php echo $user->name;?>!</p>
         <ul>
             <li><img src="../images/check.png" alt="check"><a href="<?php echo BASE_URL; ?>equipment">Administrar Equipos</a></li>
             <li><img src="../images/check.png" alt="check"><a href="<?php echo BASE_URL; ?>report">Generar Reporte</a></li>
         </ul>
-        <a href="#">Cerrar Sesión</a>
+        <a href="<?php echo BASE_URL; ?>logout">Cerrar Sesión</a>
     </section>
 
     <!-- Sección para el footer de la página -->

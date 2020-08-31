@@ -30,6 +30,8 @@ class EquipmentController
     {
         //Querys de base de datos
         global $pdo;
+
+        $result = false;
         
         $sql = 'INSERT INTO equipment (name, area, estado, mantenimiento) VALUES (:name, :area, :estado, :mantenimiento)';
         $query = $pdo->prepare($sql);

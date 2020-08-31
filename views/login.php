@@ -20,7 +20,7 @@
                     <label for="inputUser">Nombre de usuario</label>
                 </div>
                 <div class="container__input">
-                    <input type="text" class="inputUser" name="user" id="inputUser">
+                    <input type="text" class="inputUser" name="name" id="inputUser">
                 </div>
                 <div class="container__label">
                     <label for="inputPassword">Contraseña</label>
@@ -32,6 +32,19 @@
                     <input type="submit" value="Login">
                 </div>
             </form>
+            <?php
+            if (isset($errors) && $errors) {
+                echo '<div class="danger">';
+                echo '<ul>';
+                foreach ($errors as $key => $messages) {
+                    foreach ($messages as $message) {
+                        echo '<li>' . $message . '</li>';
+                    }
+                }
+                echo '</ul>';
+                echo '</div>';
+            }
+            ?>
     </section>
 
     <!-- Sección para el footer de la página -->

@@ -16,6 +16,10 @@ require_once '../vendor/autoload.php'; //Con esto ya puedo utilizar las clases d
 
 include_once '../config.php';
 
+//Iniciar sesión
+
+session_start();
+
 //Para crear una constante con la url completa. Debe ir primero para que ya esté cargado en las demás vistas.
 
 $baseFile = $_SERVER['SCRIPT_NAME']; //Me devuelve el directorio base CON el archivo raiz: /Trabajo/public/index.php
@@ -42,8 +46,8 @@ $router = new RouteCollector();
 $router->controller('/', App\Controllers\IndexController::class); //el primer parámetro es el nombre que se le dará a la ubicación del render(). El 2do parámetro es la clase del controlador que manejará la ruta.
 //Vista de Usuarios:
 $router->controller('/', App\Controllers\UserController::class);
-//Vista de Operador:
-$router->controller('/', App\Controllers\OperadorController::class);
+//Vistas de Rol:
+$router->controller('/', App\Controllers\RolController::class);
 //Vista de Equipos:
 $router->controller('/', App\Controllers\EquipmentController::class);
 //Vista de Reporte:
