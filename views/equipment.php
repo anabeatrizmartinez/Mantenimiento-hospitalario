@@ -23,29 +23,29 @@
         <div class="container__table">
             <table class="table">
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Área de Ubicación</th>
                     <th>Estado</th>
                     <th>Mantenimiento</th>
-                    <th>Actualizar</th>
-                    <th>Borrar</th>
                 </tr>
                 <?php
+                global $baseUrl;
                 foreach ($equipments as $equipment) {
                     echo '<tr>';
+                    echo '<td>' . $equipment['id'] . '</td>';
                     echo '<td>' . $equipment['name'] . '</td>';
                     echo '<td>' . $equipment['area'] . '</td>';
                     echo '<td>' . $equipment['estado'] . '</td>';
                     echo '<td>' . $equipment['mantenimiento'] . '</td>';
-                    echo '<td>Actualizar</td>';
-                    echo '<td>Borrar</td>';
                     echo '</tr>';
                 }
                 ?>
             </table>
         </div>
         <div class="container__nuevo">
-            <a href="<?php echo BASE_URL; ?>newequipment">Nuevo Equipo</a>
+        <a href="<?php echo BASE_URL; ?>option">Actualizar/Eliminar</a>
+        <a href="<?php echo BASE_URL; ?>newequipment">Nuevo Equipo</a>
         </div>
     </section>
 

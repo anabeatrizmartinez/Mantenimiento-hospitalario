@@ -33,10 +33,10 @@
                 </div>
                 <div class="container__select">
                     <select name="rol_id" id="selectRol">
-                        <option selected>Seleccionar</option>
-                        <option value="1">administrador</option>
-                        <option value="2">operador</option>
-                        <option value="3">tecnico</option>
+                        <option selected disabled>Seleccionar</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Operador</option>
+                        <option value="3">Tecnico</option>
                     </select>
                 </div>
                 <div class="container__label">

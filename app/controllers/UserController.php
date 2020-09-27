@@ -32,9 +32,9 @@ class UserController
 
             $user = $query->fetch(PDO::FETCH_OBJ); //Para convertir la consulta en un objeto con nombres de propiedades que se corresponden a los nombres de las columnas.
             if ($user) { //Si existe el usuario
-                if (password_verify($_POST['password'], $user->password)) { //Si la contraseña es correcta
-                    $_SESSION['userID'] = $user->id; //Guardo el id del usuario.
-                    header('Location:' . BASE_URL . 'rol'); //Redireccionar
+                if (password_verify($_POST['password'], $user->password)) { //Si la contraseña es correcta. El password_verify() es para descifrar la contraseña ingresada con el método password_hash() de encriptación usado.
+                    $_SESSION['userID'] = $user->id; //Guardo el id del usuario en una variable de sesión para poder identificar si hay una sesión iniciada, además así la puedo usar en el RolController.
+                    header('Location:' . BASE_URL . 'rol'); //Redireccionar a la ruta para identificar el tipo de rol del usuario.
                     return null;
                 }
             }

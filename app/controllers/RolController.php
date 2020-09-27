@@ -15,11 +15,11 @@ class RolController
             $query = $pdo->prepare('SELECT * FROM users WHERE id = :id');
             $query->execute(['id' => $userID]);
             
-            $user = $query->fetch(PDO::FETCH_OBJ);
+            $user = $query->fetch(PDO::FETCH_OBJ); //Guardo la información del usuario de la consulta.
             
             if ($user) {
-                $_SESSION['rol'] = $user->rol_id;
-                $_SESSION['user'] = $user;
+                $_SESSION['rol'] = $user->rol_id; //Guardo el rol_id en una variable de sesión para poderla usar fuera de esta función.
+                $_SESSION['user'] = $user; //Guardo la información del usuario en una variable de sesión para poderla usar fuera de esta función.
 
                 switch ($_SESSION['rol']) {
                     case 1: //Si el rol_id = 1 (id en base de datos para indicar el administrador).
@@ -36,40 +36,7 @@ class RolController
                 }
             }
         } else { //Si no hay una sesión activa.
-            header('Location:' . BASE_URL . 'login');
+            header('Location:' . BASE_URL . 'login'); //Redireccionar a la página de login.
         }
-    }
-
-    public function getAdministrador()
-    {
-        if (isset($_SESSION['userID'])) { //Si ya existe una sesión
-            if ($_SESSION['rol'] == 1) { //Si existe el usuario y corresponde al administrador.
-                return render('../views/admin.php', ['user' => $_SESSION['user']]);
-            }
-        }
-
-        header('Location:' . BASE_URL . 'login');
-    }
-
-    public function getOperador()
-    {
-        if (isset($_SESSION['userID'])) { //Si ya existe una sesión
-            if ($_SESSION['rol'] == 2) { //Si existe el usuario y corresponde al operador.
-                return render('../views/operator.php', ['user' => $_SESSION['user']]);
-            }
-        }
-        
-        header('Location:' . BASE_URL . 'login');
-    }
-
-    public function getTecnico()
-    {
-        if (isset($_SESSION['userID'])) { //Si ya existe una sesión
-            if ($_SESSION['rol'] == 3) { //Si existe el usuario y corresponde al tecnico.
-                return render('../views/tecnico.php', ['user' => $_SESSION['user']]);
-            }
-        }
-
-        header('Location:' . BASE_URL . 'login');
     }
 }

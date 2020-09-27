@@ -8,6 +8,8 @@
     },
     "require": {
         "phroute/phroute": "^2.1",
-        "siriusphp/validation": "^3.0"
+        "siriusphp/validation": "^3.0",
+        "mpdf/mpdf": "^8.0",
+        "phpoffice/phpspreadsheet": "^1.14"
     }
 }

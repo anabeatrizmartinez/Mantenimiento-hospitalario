@@ -46,12 +46,22 @@ $router = new RouteCollector();
 $router->controller('/', App\Controllers\IndexController::class); //el primer parámetro es el nombre que se le dará a la ubicación del render(). El 2do parámetro es la clase del controlador que manejará la ruta.
 //Vista de Usuarios:
 $router->controller('/', App\Controllers\UserController::class);
-//Vistas de Rol:
+//RolController:
 $router->controller('/', App\Controllers\RolController::class);
+//Vistas de Administrador:
+$router->controller('/', App\Controllers\AdminController::class);
+//Vistas de Operador:
+$router->controller('/', App\Controllers\OperController::class);
+//Vistas de Técnico:
+$router->controller('/', App\Controllers\TecController::class);
 //Vista de Equipos:
 $router->controller('/', App\Controllers\EquipmentController::class);
+//Vista de Actualizar equipo:
+$router->controller('/', App\Controllers\UpdateController::class);
 //Vista de Reporte:
 $router->controller('/', App\Controllers\ReportController::class);
+//Vista de Opción de equipo para actualizar o eliminar existente:
+$router->controller('/', App\Controllers\OptionController::class);
 
 //Dispatcher de phroute. Debe ir después de llamar las vistas.
 
@@ -59,7 +69,6 @@ $dispatcher = new Phroute\Phroute\Dispatcher($router->getData()); //Crear el obj
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $route); //Respuesta que regresa el dispatcher.
 
 echo $response;
-
 
 //Función "render" para llamar las vistas
 

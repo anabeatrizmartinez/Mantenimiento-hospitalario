@@ -22,23 +22,43 @@
                 <div class="container__label">
                     <label for="inputEquipo">Nombre de equipo</label>
                 </div>
-                <div class="container__input">
-                    <input type="text" class="inputEquipo" name="equipo" id="inputEquipo">
+                <div class="container__select">
+                    <select name="name" id="selectEquipo">
+                        <option selected disabled>Seleccionar</option>
+                        <?php
+                        foreach ($names as $name) {
+                            echo '<option>' . $name->name . '</option>';
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="container__label">
                     <label for="selectVista">Modo de visualización</label>
                 </div>
                 <div class="container__select">
                     <select name="vista" id="selectVista">
-                        <option value="0" selected>Seleccionar</option>
-                        <option value="1">PDF</option>
-                        <option value="2">Excel</option>
+                        <option selected disabled>Seleccionar</option>
+                        <option>PDF</option>
+                        <option>Excel</option>
                     </select>
                 </div>
                 <div class="container__btn">
                     <input type="submit" value="Generar Reporte">
                 </div>
             </form>
+            <?php
+            if (isset($errors) && $errors) {
+                echo '<div class="danger">';
+                echo '<ul>';
+                foreach ($errors as $key => $messages) {
+                    foreach ($messages as $message) {
+                        echo '<li>' . "$key: " . $message . '</li>';
+                    }
+                }
+                echo '</ul>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </section>
 
