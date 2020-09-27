@@ -16,17 +16,19 @@
     <section class="container">
             <h1>Login</h1>
             <form method="post">
+                <!-- Con el método post mejoro la seguridad al no mostrar en la url información. -->
                 <div class="container__label">
                     <label for="inputUser">Nombre de usuario</label>
                 </div>
                 <div class="container__input">
-                    <input type="text" class="inputUser" name="name" id="inputUser">
+                    <input type="text" class="inputUser" name="name" id="inputUser" pattern="[A-Za-z0-9_-]{1,15}">
+                    <!-- Con el atributo pattern mejoro la seguridad ante inyección sql, ya que no permite caracteres especiales como las comillas y se establece una longitud máxima de caracteres. -->
                 </div>
                 <div class="container__label">
                     <label for="inputPassword">Contraseña</label>
                 </div>
                 <div class="container__input">
-                    <input type="password" class="inputPassword" name="password" id="inputPassword">
+                    <input type="password" class="inputPassword" name="password" id="inputPassword" pattern="[A-Za-z0-9_-*]{1,8}">
                 </div>
                 <div class="container__btn">
                     <input type="submit" value="Login">
