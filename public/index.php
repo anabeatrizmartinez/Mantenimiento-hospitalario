@@ -79,5 +79,5 @@ function render($fileName, $params = []) //$fileName: archivo que queremos llama
     extract($params);
     include $fileName;
 
-    return ob_get_clean(); //Se trae los elementos actuales del buffer y lo limpia de nuevo. Regresa como una cadena todo lo escrito entre el ob_start() y el ob_get_clean(). Para tener más control del resultado y que se envíe con el $response del dispatcher.
+    return ob_get_clean(); //Limpiar el buffer, ya que se trae los elementos actuales del buffer y lo limpia de nuevo. Para tener más control del resultado y que se envíe con el $response del dispatcher.
 }

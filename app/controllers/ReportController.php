@@ -120,7 +120,7 @@ class ReportController
                     header('Content-Disposition: attachment; filename=equipo.xlsx'); //Nombre de archivo.
 
                     $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
-                    ob_end_clean(); //Limpiar el búfer y evitar errores.
+                    ob_end_clean(); //Limpiar el buffer y evitar errores.
                     $writer->save('php://output');
                     break;
             }
