@@ -1,4 +1,4 @@
-<footer class="footer">
+    <footer class="footer">
         <div class="footer__logo"> <!--Para que el logo me quede centrado con el nombre-->
             <img class="footer__logo--img" src="../images/cruz.png" alt="logo">
             <p class="footer__logo--name">Hospital del Táchira</p>

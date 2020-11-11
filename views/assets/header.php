@@ -1,4 +1,4 @@
-<header class="header">
+    <header class="header">
         <div class="header__first"> <!--Para la parte sobre la barra del menú-->
             <div class="header__first--logo"> <!--Para que el logo me quede centrado con el nombre-->
                 <img class="first__logo--img" src="../images/cruz.png" alt="logo">
